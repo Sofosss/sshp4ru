@@ -4,28 +4,4 @@ tab_spaces = 4
 
 hard_tabs = false
 
-fn_args_layout = "Block"
-
-match_arm_blocks = true
-
-comment_width = 80
-
-# vertical alignment of struct fields (default: false)
-struct_field_align_threshold = 20
-
-# Determines if chains of method calls should be indented
-chain_indent = "Block"
-
-# Keep single-line items on one line (e.g., struct declarations)
-struct_lit_single_line = false
-
-# Control how imports are grouped (default: "Preserve")
-imports_granularity = "Crate"
-
-trailing_comma = "Always"
-
-merge_imports = true
-
-format_strings = true
-
-unstable_features = true
+fn_params_layout = "Compressed"

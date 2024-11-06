@@ -1,6 +1,5 @@
-
 fn main() {
-    // Check the operating system
+    //Operating system check
     let uname_output = std::process::Command::new("uname")
         .arg("-s")
         .output()
@@ -9,13 +8,8 @@ fn main() {
     let os_name_lossy = String::from_utf8_lossy(&uname_output.stdout);
     let os_name = os_name_lossy.trim();
 
-    // Set a default feature based on the OS
+    // Kqueue if OS is Darwin or FreeBSD
     if os_name == "Darwin" || os_name == "FreeBSD" {
-        println!("GIorgossss\n");
         println!("cargo:rustc-cfg=feature=\"use_kqueue\"");
-    } 
-    else {
-        // Default
-        // println!("cargo:rustc-cfg=feature=\"use_epoll\"");
     }
 }
