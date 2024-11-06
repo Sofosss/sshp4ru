@@ -33,7 +33,7 @@ Before using `sshp4ru`, make sure you have **Rust** >= **2021** installed on you
 1. Clone the repository and navigate to the project's directory:
 
    ```bash
-   git clone https://github.com/yourusername/sshp4ru.git
+   git clone https://github.com/Sofosss/sshp4ru.git
    cd sshp4ru
    ```
 2. Install the CLI binary:
@@ -41,7 +41,7 @@ Before using `sshp4ru`, make sure you have **Rust** >= **2021** installed on you
     cargo install --path . --release
     ```
 > [!NOTE]  
-> The compiled binary will be located in the  ~/.cargo/bin directory (which should be in PATH). 
+> The compiled binary will be located in the  **~/.cargo/bin directory** (which should be in ***PATH***). 
 
 
 3. **Alternatively**, compile the CLI binary and copy it manually:
@@ -78,10 +78,17 @@ sshp4ru -f hosts.txt -m 3 uname -v
 
 # Testing and Style
 
-The test suite included in this version of the project was originally part of the [C-based implementation][sshp] and has since been adapted to the Rust version.
+The test suite included in this version of the project was originally part of the [C-based implementation][tests] and has since been adapted to the Rust version.
 
 > [!NOTE]  
 > In order to run the tests, you should use cargo build instead of cargo build --release. The compiled binary will be located in the ./target/debug/ directory when using the standard build configuration.
+
+The style requirements are minimal and are incorporated via the `cargo fmt` command based on [`rustfmt.toml`][style] file. They ensure:
+
+* Each line has maximum width of 100 columns.
+* Each tab equals 4 spaces.
+* We use spaces both for identation and for alignment.
+* We use a compressed layout of function parameters.
 
 # Future Work
 In the pursuit of self-improvement, any new suggestions, solutions and potential bug fixes are welcome. Just **open an issue** or **submit a pull request**.
@@ -110,4 +117,6 @@ Distributed under the [MIT][license-link] License. See `LICENSE.md` for more det
 [exit-codes]: https://github.com/bahamas10/sshp?tab=readme-ov-file#exit-codes
 [examples]: https://github.com/bahamas10/sshp?tab=readme-ov-file#examples
 [usage]: https://github.com/bahamas10/sshp?tab=readme-ov-file#usage
+[tests]: https://github.com/bahamas10/sshp/blob/main/test/README.md
 [rany]: https://github.com/rany2
+[style]: https://github.com/DmMeta/sshp4ru/blob/main/rustfmt.toml
