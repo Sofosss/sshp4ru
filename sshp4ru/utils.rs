@@ -427,7 +427,7 @@ pub fn print_usage<T: Write>(out: T, c: &str) -> io::Result<()> {
     writeln!(
         handle,
         "    See {}(1) for more information.",
-        colorize(PROG_NAME, &green)
+        colorize("sshp", &green)
     )?;
     Ok(())
 }

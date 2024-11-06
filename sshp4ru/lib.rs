@@ -26,7 +26,7 @@ use crate::utils::{make_pipe, Color, Colorize};
 pub const PROG_NAME: &str = "sshp4ru";
 const PROG_FULL_NAME: &str = "Parallel SSH Executor in Rust";
 pub const PROG_VERSION: &str = "0.1.0";
-const PROG_SOURCE: &str = "https://github.com/sshp";
+const PROG_SOURCE: &str = "https://github.com/DmMeta/sshp4ru";
 const PROG_LICENSE: &str = "MIT License";
 
 // max characters to process in line and join mode respectively
